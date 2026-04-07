@@ -6,8 +6,35 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		833871562F857CF400123799 /* libMyDLLoglib2.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 833871542F857CF400123799 /* libMyDLLoglib2.0.dylib */; };
+		833871572F857CF400123799 /* libMyDLDronelib.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 833871552F857CF400123799 /* libMyDLDronelib.dylib */; };
+		833871582F857D9400123799 /* libMyDLDronelib.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 833871552F857CF400123799 /* libMyDLDronelib.dylib */; };
+		833871592F857D9400123799 /* libMyDLLoglib2.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 833871542F857CF400123799 /* libMyDLLoglib2.0.dylib */; };
+		833871602F857E4100123799 /* libMyDLDronelib.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 833871552F857CF400123799 /* libMyDLDronelib.dylib */; };
+		833871612F857E4100123799 /* libMyDLLoglib2.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 833871542F857CF400123799 /* libMyDLLoglib2.0.dylib */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXCopyFilesBuildPhase section */
-		833870D92F85504600123799 /* CopyFiles */ = {
+		833871132F857BA300123799 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		8338711E2F857BAF00123799 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		833871292F857BBD00123799 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -19,22 +46,82 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		833870DB2F85504600123799 /* D_CSVEditRF */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = D_CSVEditRF; sourceTree = BUILT_PRODUCTS_DIR; };
+		833871152F857BA300123799 /* mergeADPh */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = mergeADPh; sourceTree = BUILT_PRODUCTS_DIR; };
+		833871202F857BAF00123799 /* remapAD */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = remapAD; sourceTree = BUILT_PRODUCTS_DIR; };
+		8338712B2F857BBD00123799 /* remapPh */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = remapPh; sourceTree = BUILT_PRODUCTS_DIR; };
+		833871542F857CF400123799 /* libMyDLLoglib2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libMyDLLoglib2.0.dylib; path = ../../../../usr/local/lib/libMyDLLoglib2.0.dylib; sourceTree = "<group>"; };
+		833871552F857CF400123799 /* libMyDLDronelib.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libMyDLDronelib.dylib; path = ../../../../usr/local/lib/libMyDLDronelib.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		8338715E2F857DFE00123799 /* Exceptions for "Common" folder in "remapAD" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				common.c,
+			);
+			target = 8338711F2F857BAF00123799 /* remapAD */;
+		};
+		8338715F2F857DFE00123799 /* Exceptions for "Common" folder in "remapPh" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				common.c,
+			);
+			target = 8338712A2F857BBD00123799 /* remapPh */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		833870DD2F85504600123799 /* D_CSVEditRF */ = {
+		833870E52F8579DB00123799 /* Common */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = D_CSVEditRF;
+			exceptions = (
+				8338715E2F857DFE00123799 /* Exceptions for "Common" folder in "remapAD" target */,
+				8338715F2F857DFE00123799 /* Exceptions for "Common" folder in "remapPh" target */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		833871162F857BA300123799 /* mergeADPh */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = mergeADPh;
+			sourceTree = "<group>";
+		};
+		833871212F857BAF00123799 /* remapAD */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = remapAD;
+			sourceTree = "<group>";
+		};
+		8338712C2F857BBD00123799 /* remapPh */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = remapPh;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		833870D82F85504600123799 /* Frameworks */ = {
+		833871122F857BA300123799 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				833871562F857CF400123799 /* libMyDLLoglib2.0.dylib in Frameworks */,
+				833871572F857CF400123799 /* libMyDLDronelib.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8338711D2F857BAF00123799 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				833871582F857D9400123799 /* libMyDLDronelib.dylib in Frameworks */,
+				833871592F857D9400123799 /* libMyDLLoglib2.0.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		833871282F857BBD00123799 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				833871602F857E4100123799 /* libMyDLDronelib.dylib in Frameworks */,
+				833871612F857E4100123799 /* libMyDLLoglib2.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,7 +131,11 @@
 		833870D22F85504600123799 = {
 			isa = PBXGroup;
 			children = (
-				833870DD2F85504600123799 /* D_CSVEditRF */,
+				833870E52F8579DB00123799 /* Common */,
+				833871162F857BA300123799 /* mergeADPh */,
+				833871212F857BAF00123799 /* remapAD */,
+				8338712C2F857BBD00123799 /* remapPh */,
+				833871532F857CF400123799 /* Frameworks */,
 				833870DC2F85504600123799 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,34 +143,89 @@
 		833870DC2F85504600123799 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				833870DB2F85504600123799 /* D_CSVEditRF */,
+				833871152F857BA300123799 /* mergeADPh */,
+				833871202F857BAF00123799 /* remapAD */,
+				8338712B2F857BBD00123799 /* remapPh */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		833871532F857CF400123799 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				833871552F857CF400123799 /* libMyDLDronelib.dylib */,
+				833871542F857CF400123799 /* libMyDLLoglib2.0.dylib */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		833870DA2F85504600123799 /* D_CSVEditRF */ = {
+		833871142F857BA300123799 /* mergeADPh */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 833870E22F85504600123799 /* Build configuration list for PBXNativeTarget "D_CSVEditRF" */;
+			buildConfigurationList = 833871192F857BA300123799 /* Build configuration list for PBXNativeTarget "mergeADPh" */;
 			buildPhases = (
-				833870D72F85504600123799 /* Sources */,
-				833870D82F85504600123799 /* Frameworks */,
-				833870D92F85504600123799 /* CopyFiles */,
+				833871112F857BA300123799 /* Sources */,
+				833871122F857BA300123799 /* Frameworks */,
+				833871132F857BA300123799 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				833870DD2F85504600123799 /* D_CSVEditRF */,
+				833871162F857BA300123799 /* mergeADPh */,
 			);
-			name = D_CSVEditRF;
+			name = mergeADPh;
 			packageProductDependencies = (
 			);
-			productName = D_CSVEditRF;
-			productReference = 833870DB2F85504600123799 /* D_CSVEditRF */;
+			productName = mergeADPh;
+			productReference = 833871152F857BA300123799 /* mergeADPh */;
+			productType = "com.apple.product-type.tool";
+		};
+		8338711F2F857BAF00123799 /* remapAD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 833871242F857BAF00123799 /* Build configuration list for PBXNativeTarget "remapAD" */;
+			buildPhases = (
+				8338711C2F857BAF00123799 /* Sources */,
+				8338711D2F857BAF00123799 /* Frameworks */,
+				8338711E2F857BAF00123799 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				833871212F857BAF00123799 /* remapAD */,
+			);
+			name = remapAD;
+			packageProductDependencies = (
+			);
+			productName = remapAD;
+			productReference = 833871202F857BAF00123799 /* remapAD */;
+			productType = "com.apple.product-type.tool";
+		};
+		8338712A2F857BBD00123799 /* remapPh */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8338712F2F857BBD00123799 /* Build configuration list for PBXNativeTarget "remapPh" */;
+			buildPhases = (
+				833871272F857BBD00123799 /* Sources */,
+				833871282F857BBD00123799 /* Frameworks */,
+				833871292F857BBD00123799 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				8338712C2F857BBD00123799 /* remapPh */,
+			);
+			name = remapPh;
+			packageProductDependencies = (
+			);
+			productName = remapPh;
+			productReference = 8338712B2F857BBD00123799 /* remapPh */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -91,7 +237,13 @@
 				BuildIndependentTargetsInParallel = 1;
 				LastUpgradeCheck = 2630;
 				TargetAttributes = {
-					833870DA2F85504600123799 = {
+					833871142F857BA300123799 = {
+						CreatedOnToolsVersion = 26.3;
+					};
+					8338711F2F857BAF00123799 = {
+						CreatedOnToolsVersion = 26.3;
+					};
+					8338712A2F857BBD00123799 = {
 						CreatedOnToolsVersion = 26.3;
 					};
 				};
@@ -110,13 +262,29 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				833870DA2F85504600123799 /* D_CSVEditRF */,
+				833871142F857BA300123799 /* mergeADPh */,
+				8338711F2F857BAF00123799 /* remapAD */,
+				8338712A2F857BBD00123799 /* remapPh */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		833870D72F85504600123799 /* Sources */ = {
+		833871112F857BA300123799 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8338711C2F857BAF00123799 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		833871272F857BBD00123799 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -241,15 +409,53 @@
 			};
 			name = Release;
 		};
-		833870E32F85504600123799 /* Debug */ = {
+		8338711A2F857BA300123799 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				"HEADER_SEARCH_PATHS[arch=*]" = /usr/local/include;
+				"LIBRARY_SEARCH_PATHS[arch=*]" = /usr/local/lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8338711B2F857BA300123799 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
+			name = Release;
+		};
+		833871252F857BAF00123799 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				"HEADER_SEARCH_PATHS[arch=*]" = /usr/local/include;
+				"LIBRARY_SEARCH_PATHS[arch=*]" = /usr/local/lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
 			name = Debug;
 		};
-		833870E42F85504600123799 /* Release */ = {
+		833871262F857BAF00123799 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		833871302F857BBD00123799 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				"HEADER_SEARCH_PATHS[arch=*]" = /usr/local/include;
+				"LIBRARY_SEARCH_PATHS[arch=*]" = /usr/local/lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		833871312F857BBD00123799 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -269,11 +475,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		833870E22F85504600123799 /* Build configuration list for PBXNativeTarget "D_CSVEditRF" */ = {
+		833871192F857BA300123799 /* Build configuration list for PBXNativeTarget "mergeADPh" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				833870E32F85504600123799 /* Debug */,
-				833870E42F85504600123799 /* Release */,
+				8338711A2F857BA300123799 /* Debug */,
+				8338711B2F857BA300123799 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		833871242F857BAF00123799 /* Build configuration list for PBXNativeTarget "remapAD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				833871252F857BAF00123799 /* Debug */,
+				833871262F857BAF00123799 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8338712F2F857BBD00123799 /* Build configuration list for PBXNativeTarget "remapPh" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				833871302F857BBD00123799 /* Debug */,
+				833871312F857BBD00123799 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
