@@ -241,7 +241,8 @@ void addMString(char *str) {
 char *chkXlate(AUXB which, char *fld) {
    static XLTAB xlstrings[] = {
        {"Detour", "P_GPS(CA),"},
-       {"Motors_Started", "Motors_On,"}
+       {"Motors_Started", "Motors_On,"},
+       {"Starting Motors", "Motors_On,"},
    };
    static int sztab = sizeof(xlstrings)/sizeof(xlstrings[0]);
 
