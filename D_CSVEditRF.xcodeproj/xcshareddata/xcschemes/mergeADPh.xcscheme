@@ -6,6 +6,24 @@
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES"
       buildArchitectures = "Automatic">
+      <PostActions>
+         <ExecutionAction
+            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
+            <ActionContent
+               title = "Run Script"
+               scriptText = "# Type a script or drag a script file from your workspace to insert its path.&#10;/usr/local/bin/mergeadphxattr ${BUILT_PRODUCTS_DIR}/${FULL_PRODUCT_NAME}&#10;/usr/local/bin/cpxcodebuild bin&#10;">
+               <EnvironmentBuildable>
+                  <BuildableReference
+                     BuildableIdentifier = "primary"
+                     BlueprintIdentifier = "833871142F857BA300123799"
+                     BuildableName = "RFmergeADPh"
+                     BlueprintName = "RFmergeADPh"
+                     ReferencedContainer = "container:D_CSVEditRF.xcodeproj">
+                  </BuildableReference>
+               </EnvironmentBuildable>
+            </ActionContent>
+         </ExecutionAction>
+      </PostActions>
       <BuildActionEntries>
          <BuildActionEntry
             buildForTesting = "YES"
@@ -16,8 +34,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "833871142F857BA300123799"
-               BuildableName = "mergeADPh"
-               BlueprintName = "mergeADPh"
+               BuildableName = "RFmergeADPh"
+               BlueprintName = "RFmergeADPh"
                ReferencedContainer = "container:D_CSVEditRF.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -46,11 +64,25 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "833871142F857BA300123799"
-            BuildableName = "mergeADPh"
-            BlueprintName = "mergeADPh"
+            BuildableName = "RFmergeADPh"
+            BlueprintName = "RFmergeADPh"
             ReferencedContainer = "container:D_CSVEditRF.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <CommandLineArguments>
+         <CommandLineArgument
+            argument = "-wa:DPe"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "-o^"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "2026-03-24-12-25-Flight-Airdata.csv"
+            isEnabled = "YES">
+         </CommandLineArgument>
+      </CommandLineArguments>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -63,8 +95,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "833871142F857BA300123799"
-            BuildableName = "mergeADPh"
-            BlueprintName = "mergeADPh"
+            BuildableName = "RFmergeADPh"
+            BlueprintName = "RFmergeADPh"
             ReferencedContainer = "container:D_CSVEditRF.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
