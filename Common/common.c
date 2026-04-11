@@ -18,6 +18,8 @@
 extern MSG_STRNGS sMsg_strngs;
 extern int gShowLine;
 
+static STATFS manageSTATFS(ACT, STATFS);
+
 char *fmtflt(FMTD *fmtinfo, char *str) {
     static char sFmtbuf[30];
     char *cp1  = strchr(str,DECPNT);
