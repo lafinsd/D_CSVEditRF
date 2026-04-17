@@ -26,7 +26,7 @@ int getminfo(char **prog,MAPINFO *m) {
     m->size = 0;
     
     {
-        char *fname = calloc(250,1);
+        char *fname;
         char *user,*lfn;
         ssize_t res;
         CMD_LINE p;
@@ -35,7 +35,7 @@ int getminfo(char **prog,MAPINFO *m) {
         
         sprintf(name,"%s/Applications/Application Support/",getenv("HOME"));
         
-        whereami(&p,fname);
+        fname = whereami(&p);
         
         if ((res=getxattr(fname, "user.intable", NULL, 0, 0, 0)) > 0) {
             user = calloc(++res,1);

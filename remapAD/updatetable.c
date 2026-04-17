@@ -31,13 +31,13 @@ int updateTable(CMD_LINE *p,RMAPINFO *minfo) {
     FILE *logf;
     
     {
-        char *fname = calloc(250,1);
+        char *fname;
         char *user,*lfn;
         ssize_t res;
         
         sprintf(name,"%s/Applications/Application Support/",getenv("HOME"));
         
-        whereami(p,fname);
+        fname = whereami(p);
         
         if ((res=getxattr(fname, "user.intable", NULL, 0, 0, 0)) > 0) {
             user = calloc(++res,1);
