@@ -26,7 +26,6 @@
 #define OMMSEC    3
 #define OMCHDG   22
 
-#define GMTC      8
 #define NUMCNAMES 4
 #define HIDECHAR  '!'
 #define NEWLINE   0xA

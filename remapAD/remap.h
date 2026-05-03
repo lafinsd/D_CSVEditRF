@@ -25,7 +25,6 @@
 #define OMGHDG   35
 #define OMCHDG   22
 
-#define GMTC       8
 #define NUMCNAMES  4
 #define HIDECHAR   '!'
 #define EOL        0xA

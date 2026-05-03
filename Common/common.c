@@ -166,23 +166,6 @@ int procRow(RMAPINFO minfo, char *ibuf, char *obuf, int numlines, int numout) {
      return obuf+strlen(dstbuf);
  }
  
- int DSTos(void) {
-     static int sDSTos = -1;
-    
-     if (sDSTos > -1) {
-         return sDSTos;
-     }
-    
-     time_t current_time   = time(NULL);
-     struct tm *local_time = localtime(&current_time);
-    
-     sDSTos = 0;
-     if (local_time->tm_isdst > 0) {
-         sDSTos = 1;
-     }
-     return sDSTos;
- }
- 
  TMFMT manageTMFMT(ACT req, TMFMT val) {
       static TMFMT sTmfmt = FMTUNDEF;
      

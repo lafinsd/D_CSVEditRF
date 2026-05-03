@@ -15,7 +15,6 @@ typedef struct {
 
 void  addMString(char *);
 char *procMDST(char *, char *, int);
-int   DSTos(void);
 int   procRow(RMAPINFO, char *, char *, int, int);
 char *fmtflt(FMTD *, char *);
 char *chkXlate(AUXB, char *);
