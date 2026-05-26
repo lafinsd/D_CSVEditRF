@@ -13,6 +13,8 @@
 		833871592F857D9400123799 /* libMyDLLoglib2.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 833871542F857CF400123799 /* libMyDLLoglib2.0.dylib */; };
 		833871602F857E4100123799 /* libMyDLDronelib.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 833871552F857CF400123799 /* libMyDLDronelib.dylib */; };
 		833871612F857E4100123799 /* libMyDLLoglib2.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 833871542F857CF400123799 /* libMyDLLoglib2.0.dylib */; };
+		83B7BC892FC60C9800C2334C /* libMyDLCommon.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B7BC882FC60C9800C2334C /* libMyDLCommon.dylib */; };
+		83B7BC8A2FC60C9800C2334C /* libMyDLCommon.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 83B7BC882FC60C9800C2334C /* libMyDLCommon.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,6 +45,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		83B7BC8B2FC60C9800C2334C /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				83B7BC8A2FC60C9800C2334C /* libMyDLCommon.dylib in Embed Libraries */,
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +64,7 @@
 		8338712B2F857BBD00123799 /* RFremapPh */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RFremapPh; sourceTree = BUILT_PRODUCTS_DIR; };
 		833871542F857CF400123799 /* libMyDLLoglib2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libMyDLLoglib2.0.dylib; path = ../../../../usr/local/lib/libMyDLLoglib2.0.dylib; sourceTree = "<group>"; };
 		833871552F857CF400123799 /* libMyDLDronelib.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libMyDLDronelib.dylib; path = ../../../../usr/local/lib/libMyDLDronelib.dylib; sourceTree = "<group>"; };
+		83B7BC882FC60C9800C2334C /* libMyDLCommon.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libMyDLCommon.dylib; path = ../../../../usr/local/lib/libMyDLCommon.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -104,6 +118,7 @@
 			files = (
 				833871562F857CF400123799 /* libMyDLLoglib2.0.dylib in Frameworks */,
 				833871572F857CF400123799 /* libMyDLDronelib.dylib in Frameworks */,
+				83B7BC892FC60C9800C2334C /* libMyDLCommon.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,6 +168,7 @@
 		833871532F857CF400123799 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				83B7BC882FC60C9800C2334C /* libMyDLCommon.dylib */,
 				833871552F857CF400123799 /* libMyDLDronelib.dylib */,
 				833871542F857CF400123799 /* libMyDLLoglib2.0.dylib */,
 			);
@@ -169,6 +185,7 @@
 				833871112F857BA300123799 /* Sources */,
 				833871122F857BA300123799 /* Frameworks */,
 				833871132F857BA300123799 /* CopyFiles */,
+				83B7BC8B2FC60C9800C2334C /* Embed Libraries */,
 			);
 			buildRules = (
 			);
