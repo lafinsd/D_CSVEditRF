@@ -17,6 +17,7 @@
 #include "gopt.h"
 #include "updateTable.h"
 #include "common.h"
+#include "libcommon.h"
 
 #define VERSION "4.3"
 
@@ -61,16 +62,14 @@ static void csvsepsub(char *);
 static void csvrepsub(char *);
 
 int main(int argc, char **argv) {
-    GOPT  opts;
+    GOPT  opts = {{argc,argv}};
     FILE *fin, *fout;
     char ibuf[BUFSIZE], obuf[BUFSIZE];
     int  retval = 0, numlines=0, numout = 0;
     RMAPINFO minfo;
+    char *pbuf = buildcontext(argv[0]);
     
-    printf("%s %s-Llib:%s-Dlib:%s (%s %s)\n\n", basename(argv[0]), VERSION, getLogLibVer(),getDroneLibVer(), __DATE__, __TIME__);
-    
-    opts.cl.argc = argc;
-    opts.cl.argv = argv;
+    printf("%s %s-Llib:%s-Dlib:%s-Clib:%s (%s %s Build:%s)\n\n", basename(argv[0]), VERSION, getLogLibVer(),getDroneLibVer(), getCommonLibVer(),__DATE__, __TIME__,pbuf);
     
     if (procopt(&opts)) {
         printf("Usage: %s [-o<n>] [-w<%s:<m>>] [-k] [-r] [-R] [-d] [-t] [-h] [-c] [-S[milliseconds]] [-s[milliseconds]]  <file name>\n\n",basename(argv[0]),mkhintstring());
