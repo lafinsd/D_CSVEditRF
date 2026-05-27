@@ -7,12 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		833871562F857CF400123799 /* libMyDLLoglib2.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 833871542F857CF400123799 /* libMyDLLoglib2.0.dylib */; };
 		833871572F857CF400123799 /* libMyDLDronelib.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 833871552F857CF400123799 /* libMyDLDronelib.dylib */; };
 		833871582F857D9400123799 /* libMyDLDronelib.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 833871552F857CF400123799 /* libMyDLDronelib.dylib */; };
-		833871592F857D9400123799 /* libMyDLLoglib2.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 833871542F857CF400123799 /* libMyDLLoglib2.0.dylib */; };
 		833871602F857E4100123799 /* libMyDLDronelib.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 833871552F857CF400123799 /* libMyDLDronelib.dylib */; };
-		833871612F857E4100123799 /* libMyDLLoglib2.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 833871542F857CF400123799 /* libMyDLLoglib2.0.dylib */; };
 		83B7BC892FC60C9800C2334C /* libMyDLCommon.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B7BC882FC60C9800C2334C /* libMyDLCommon.dylib */; };
 		83B7BC8A2FC60C9800C2334C /* libMyDLCommon.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 83B7BC882FC60C9800C2334C /* libMyDLCommon.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		83B7BD152FC65F0800C2334C /* libMyDLCommon.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B7BC882FC60C9800C2334C /* libMyDLCommon.dylib */; };
@@ -118,7 +115,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				833871562F857CF400123799 /* libMyDLLoglib2.0.dylib in Frameworks */,
 				833871572F857CF400123799 /* libMyDLDronelib.dylib in Frameworks */,
 				83B7BC892FC60C9800C2334C /* libMyDLCommon.dylib in Frameworks */,
 			);
@@ -130,7 +126,6 @@
 			files = (
 				83B7BD152FC65F0800C2334C /* libMyDLCommon.dylib in Frameworks */,
 				833871582F857D9400123799 /* libMyDLDronelib.dylib in Frameworks */,
-				833871592F857D9400123799 /* libMyDLLoglib2.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,7 +135,6 @@
 			files = (
 				83B7BD162FC65F8800C2334C /* libMyDLCommon.dylib in Frameworks */,
 				833871602F857E4100123799 /* libMyDLDronelib.dylib in Frameworks */,
-				833871612F857E4100123799 /* libMyDLLoglib2.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,11 +361,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				"HEADER_SEARCH_PATHS[arch=*]" = /usr/local/include;
+				"LIBRARY_SEARCH_PATHS[arch=*]" = /usr/local/lib;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 26.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				"OTHER_LDFLAGS[arch=*]" = "-lMyDLCommon";
 				SDKROOT = macosx;
 			};
 			name = Debug;

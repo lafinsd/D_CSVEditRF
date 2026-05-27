@@ -12,7 +12,7 @@
 #include <errno.h>
 #include <libgen.h>   // basename ()
 
-#include "cl_log2.0.h"
+#include "libcommon.h"
 #include "drone.h"
 #include "remap.h"
 #include "gopt.h"

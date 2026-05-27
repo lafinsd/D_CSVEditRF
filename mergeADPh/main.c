@@ -11,12 +11,11 @@
 #include <libgen.h>    // basename ()
 #include <sys/xattr.h> // for get/setxattr()
 
-#include "cl_log2.0.h"
+#include "libcommon.h"
 #include "drone.h"
 #include "mergedat.h"
 #include "gopt.h"
 #include "tableget.h"
-#include "libcommon.h"
 
 #define VERSION "3.0"
 
@@ -32,14 +31,16 @@ static int  sanitycheck(char *,char *);
 static void tabsort(MAPINFO *);
 
 int main(int argc, char **argv) {
-    GOPT opts = {{argc,argv}};
+    GOPT opts;
     MAPINFO minfo;
     IOINFO io;
     int numin = 0;
     char *pbuf = buildcontext(argv[0]);
     
-    printf("%s %s-Llib:%s-Dlib:%s-Clib:%s (%s %s Build:%s)\n\n", basename(argv[0]), VERSION, getLogLibVer(),getDroneLibVer(), getCommonLibVer(),__DATE__, __TIME__,pbuf);
+    printf("%s %s-Dlib:%s-Clib:%s (%s %s Build:%s)\n\n", basename(argv[0]), VERSION, getDroneLibVer(), getCommonLibVer(),__DATE__, __TIME__,pbuf);
     
+    opts.cl.argc = argc;
+    opts.cl.argv = argv;
     
     if (procopt(&opts)) {
         printf("Usage: %s [-w<%s:<m>>] [-o<outfilename>] <adfilename> <phfilename>\n\n",basename(argv[0]),mkhintstring());

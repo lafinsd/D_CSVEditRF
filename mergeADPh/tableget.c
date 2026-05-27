@@ -11,7 +11,7 @@
 #include <sys/xattr.h> // for get/setxattr()
 
 #include "drone.h"
-#include "cl_log2.0.h"
+#include "libcommon.h"
 #include "mergedat.h"
 
 static int subit(char *,MAPTBL *);

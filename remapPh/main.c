@@ -13,7 +13,7 @@
 #include <time.h>
 #include <sys/xattr.h> // for get/setxattr()
 
-#include "cl_log2.0.h"
+#include "libcommon.h"
 #include "drone.h"
 #include "remap.h"
 #include "gopt.h"
@@ -58,7 +58,7 @@ static void    csvsepsub(char *);
 static void    csvrepsub(char *);
 
 int main(int argc, char **argv) {
-    GOPT  opts = {{argc,argv}};
+    GOPT  opts;
     FILE *fin, *fout;
     char ibuf[BUFSIZE], obuf[BUFSIZE];
     int  retval = 0, numlines=0, numout = 0;
@@ -67,7 +67,10 @@ int main(int argc, char **argv) {
     
     init(argv[0]);
     
-    printf("%s %s-Llib:%s-Dlib:%s-Clib:%s (%s %s Build:%s)\n\n", basename(argv[0]), VERSION, getLogLibVer(),getDroneLibVer(), getCommonLibVer(),__DATE__, __TIME__,pbuf);
+    printf("%s %s-Dlib:%s-Clib:%s (%s %s Build:%s)\n\n", basename(argv[0]), VERSION, getDroneLibVer(), getCommonLibVer(),__DATE__, __TIME__,pbuf);
+    
+    opts.cl.argc = argc;
+    opts.cl.argv = argv;
     
     if (procopt(&opts)) {
         printf("Usage: %s [-w<%s:<m>>] [-k] [-d] [-t] [-c] [-h] [-o<fn>] [-S[milliseconds]] [-s[milliseconds]]  <file name>\n\n",basename(argv[0]),mkhintstring());

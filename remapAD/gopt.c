@@ -11,7 +11,7 @@
 #include <errno.h>
 #include <string.h>
 
-#include "cl_log2.0.h"
+#include "libcommon.h"
 #include "drone.h"
 #include "remap.h"
 #include "gopt.h"
