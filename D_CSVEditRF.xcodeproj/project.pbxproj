@@ -10,10 +10,7 @@
 		833871572F857CF400123799 /* libMyDLDronelib.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 833871552F857CF400123799 /* libMyDLDronelib.dylib */; };
 		833871582F857D9400123799 /* libMyDLDronelib.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 833871552F857CF400123799 /* libMyDLDronelib.dylib */; };
 		833871602F857E4100123799 /* libMyDLDronelib.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 833871552F857CF400123799 /* libMyDLDronelib.dylib */; };
-		83B7BC892FC60C9800C2334C /* libMyDLCommon.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B7BC882FC60C9800C2334C /* libMyDLCommon.dylib */; };
 		83B7BC8A2FC60C9800C2334C /* libMyDLCommon.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 83B7BC882FC60C9800C2334C /* libMyDLCommon.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		83B7BD152FC65F0800C2334C /* libMyDLCommon.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B7BC882FC60C9800C2334C /* libMyDLCommon.dylib */; };
-		83B7BD162FC65F8800C2334C /* libMyDLCommon.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B7BC882FC60C9800C2334C /* libMyDLCommon.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -116,7 +113,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				833871572F857CF400123799 /* libMyDLDronelib.dylib in Frameworks */,
-				83B7BC892FC60C9800C2334C /* libMyDLCommon.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,7 +120,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83B7BD152FC65F0800C2334C /* libMyDLCommon.dylib in Frameworks */,
 				833871582F857D9400123799 /* libMyDLDronelib.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -133,7 +128,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83B7BD162FC65F8800C2334C /* libMyDLCommon.dylib in Frameworks */,
 				833871602F857E4100123799 /* libMyDLDronelib.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,7 +244,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastUpgradeCheck = 2630;
+				LastUpgradeCheck = 2650;
 				TargetAttributes = {
 					833871142F857BA300123799 = {
 						CreatedOnToolsVersion = 26.3;
@@ -343,6 +337,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -364,12 +359,13 @@
 				"HEADER_SEARCH_PATHS[arch=*]" = /usr/local/include;
 				"LIBRARY_SEARCH_PATHS[arch=*]" = /usr/local/lib;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 26.2;
+				MACOSX_DEPLOYMENT_TARGET = 26.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				"OTHER_LDFLAGS[arch=*]" = "-lMyDLCommon";
 				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 			};
 			name = Debug;
 		};
@@ -407,6 +403,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -420,10 +417,11 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 26.2;
+				MACOSX_DEPLOYMENT_TARGET = 26.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 			};
 			name = Release;
 		};
@@ -431,6 +429,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
 				"HEADER_SEARCH_PATHS[arch=*]" = /usr/local/include;
 				"LIBRARY_SEARCH_PATHS[arch=*]" = /usr/local/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -441,6 +440,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -449,6 +449,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
 				"HEADER_SEARCH_PATHS[arch=*]" = /usr/local/include;
 				"LIBRARY_SEARCH_PATHS[arch=*]" = /usr/local/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -459,6 +460,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -467,6 +469,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
 				"HEADER_SEARCH_PATHS[arch=*]" = /usr/local/include;
 				"LIBRARY_SEARCH_PATHS[arch=*]" = /usr/local/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -477,6 +480,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
