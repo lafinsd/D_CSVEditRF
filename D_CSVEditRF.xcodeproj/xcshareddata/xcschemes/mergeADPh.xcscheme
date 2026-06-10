@@ -16,8 +16,8 @@
                   <BuildableReference
                      BuildableIdentifier = "primary"
                      BlueprintIdentifier = "833871142F857BA300123799"
-                     BuildableName = "RFmergeADPh"
-                     BlueprintName = "RFmergeADPh"
+                     BuildableName = "mergeADPh"
+                     BlueprintName = "mergeADPh"
                      ReferencedContainer = "container:D_CSVEditRF.xcodeproj">
                   </BuildableReference>
                </EnvironmentBuildable>
@@ -34,8 +34,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "833871142F857BA300123799"
-               BuildableName = "RFmergeADPh"
-               BlueprintName = "RFmergeADPh"
+               BuildableName = "mergeADPh"
+               BlueprintName = "mergeADPh"
                ReferencedContainer = "container:D_CSVEditRF.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -64,8 +64,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "833871142F857BA300123799"
-            BuildableName = "RFmergeADPh"
-            BlueprintName = "RFmergeADPh"
+            BuildableName = "mergeADPh"
+            BlueprintName = "mergeADPh"
             ReferencedContainer = "container:D_CSVEditRF.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -95,8 +95,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "833871142F857BA300123799"
-            BuildableName = "RFmergeADPh"
-            BlueprintName = "RFmergeADPh"
+            BuildableName = "mergeADPh"
+            BlueprintName = "mergeADPh"
             ReferencedContainer = "container:D_CSVEditRF.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

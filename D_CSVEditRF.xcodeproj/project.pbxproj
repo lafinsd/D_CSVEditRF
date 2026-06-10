@@ -55,28 +55,28 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		833871152F857BA300123799 /* RFmergeADPh */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RFmergeADPh; sourceTree = BUILT_PRODUCTS_DIR; };
-		833871202F857BAF00123799 /* RFremapAD */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RFremapAD; sourceTree = BUILT_PRODUCTS_DIR; };
-		8338712B2F857BBD00123799 /* RFremapPh */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RFremapPh; sourceTree = BUILT_PRODUCTS_DIR; };
+		833871152F857BA300123799 /* mergeADPh */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = mergeADPh; sourceTree = BUILT_PRODUCTS_DIR; };
+		833871202F857BAF00123799 /* remapAD */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = remapAD; sourceTree = BUILT_PRODUCTS_DIR; };
+		8338712B2F857BBD00123799 /* remapPh */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = remapPh; sourceTree = BUILT_PRODUCTS_DIR; };
 		833871542F857CF400123799 /* libMyDLLoglib2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libMyDLLoglib2.0.dylib; path = ../../../../usr/local/lib/libMyDLLoglib2.0.dylib; sourceTree = "<group>"; };
 		833871552F857CF400123799 /* libMyDLDronelib.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libMyDLDronelib.dylib; path = ../../../../usr/local/lib/libMyDLDronelib.dylib; sourceTree = "<group>"; };
 		83B7BC882FC60C9800C2334C /* libMyDLCommon.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libMyDLCommon.dylib; path = ../../../../usr/local/lib/libMyDLCommon.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		8338715E2F857DFE00123799 /* Exceptions for "Common" folder in "RFremapAD" target */ = {
+		8338715E2F857DFE00123799 /* Exceptions for "Common" folder in "remapAD" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				common.c,
 			);
-			target = 8338711F2F857BAF00123799 /* RFremapAD */;
+			target = 8338711F2F857BAF00123799 /* remapAD */;
 		};
-		8338715F2F857DFE00123799 /* Exceptions for "Common" folder in "RFremapPh" target */ = {
+		8338715F2F857DFE00123799 /* Exceptions for "Common" folder in "remapPh" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				common.c,
 			);
-			target = 8338712A2F857BBD00123799 /* RFremapPh */;
+			target = 8338712A2F857BBD00123799 /* remapPh */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -84,8 +84,8 @@
 		833870E52F8579DB00123799 /* Common */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				8338715E2F857DFE00123799 /* Exceptions for "Common" folder in "RFremapAD" target */,
-				8338715F2F857DFE00123799 /* Exceptions for "Common" folder in "RFremapPh" target */,
+				8338715E2F857DFE00123799 /* Exceptions for "Common" folder in "remapAD" target */,
+				8338715F2F857DFE00123799 /* Exceptions for "Common" folder in "remapPh" target */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -150,9 +150,9 @@
 		833870DC2F85504600123799 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				833871152F857BA300123799 /* RFmergeADPh */,
-				833871202F857BAF00123799 /* RFremapAD */,
-				8338712B2F857BBD00123799 /* RFremapPh */,
+				833871152F857BA300123799 /* mergeADPh */,
+				833871202F857BAF00123799 /* remapAD */,
+				8338712B2F857BBD00123799 /* remapPh */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -170,9 +170,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		833871142F857BA300123799 /* RFmergeADPh */ = {
+		833871142F857BA300123799 /* mergeADPh */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 833871192F857BA300123799 /* Build configuration list for PBXNativeTarget "RFmergeADPh" */;
+			buildConfigurationList = 833871192F857BA300123799 /* Build configuration list for PBXNativeTarget "mergeADPh" */;
 			buildPhases = (
 				833871112F857BA300123799 /* Sources */,
 				833871122F857BA300123799 /* Frameworks */,
@@ -186,16 +186,16 @@
 			fileSystemSynchronizedGroups = (
 				833871162F857BA300123799 /* mergeADPh */,
 			);
-			name = RFmergeADPh;
+			name = mergeADPh;
 			packageProductDependencies = (
 			);
 			productName = mergeADPh;
-			productReference = 833871152F857BA300123799 /* RFmergeADPh */;
+			productReference = 833871152F857BA300123799 /* mergeADPh */;
 			productType = "com.apple.product-type.tool";
 		};
-		8338711F2F857BAF00123799 /* RFremapAD */ = {
+		8338711F2F857BAF00123799 /* remapAD */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 833871242F857BAF00123799 /* Build configuration list for PBXNativeTarget "RFremapAD" */;
+			buildConfigurationList = 833871242F857BAF00123799 /* Build configuration list for PBXNativeTarget "remapAD" */;
 			buildPhases = (
 				8338711C2F857BAF00123799 /* Sources */,
 				8338711D2F857BAF00123799 /* Frameworks */,
@@ -208,16 +208,16 @@
 			fileSystemSynchronizedGroups = (
 				833871212F857BAF00123799 /* remapAD */,
 			);
-			name = RFremapAD;
+			name = remapAD;
 			packageProductDependencies = (
 			);
 			productName = remapAD;
-			productReference = 833871202F857BAF00123799 /* RFremapAD */;
+			productReference = 833871202F857BAF00123799 /* remapAD */;
 			productType = "com.apple.product-type.tool";
 		};
-		8338712A2F857BBD00123799 /* RFremapPh */ = {
+		8338712A2F857BBD00123799 /* remapPh */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8338712F2F857BBD00123799 /* Build configuration list for PBXNativeTarget "RFremapPh" */;
+			buildConfigurationList = 8338712F2F857BBD00123799 /* Build configuration list for PBXNativeTarget "remapPh" */;
 			buildPhases = (
 				833871272F857BBD00123799 /* Sources */,
 				833871282F857BBD00123799 /* Frameworks */,
@@ -230,11 +230,11 @@
 			fileSystemSynchronizedGroups = (
 				8338712C2F857BBD00123799 /* remapPh */,
 			);
-			name = RFremapPh;
+			name = remapPh;
 			packageProductDependencies = (
 			);
 			productName = remapPh;
-			productReference = 8338712B2F857BBD00123799 /* RFremapPh */;
+			productReference = 8338712B2F857BBD00123799 /* remapPh */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -271,9 +271,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				833871142F857BA300123799 /* RFmergeADPh */,
-				8338711F2F857BAF00123799 /* RFremapAD */,
-				8338712A2F857BBD00123799 /* RFremapPh */,
+				833871142F857BA300123799 /* mergeADPh */,
+				8338711F2F857BAF00123799 /* remapAD */,
+				8338712A2F857BBD00123799 /* remapPh */,
 			);
 		};
 /* End PBXProject section */
@@ -497,7 +497,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		833871192F857BA300123799 /* Build configuration list for PBXNativeTarget "RFmergeADPh" */ = {
+		833871192F857BA300123799 /* Build configuration list for PBXNativeTarget "mergeADPh" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8338711A2F857BA300123799 /* Debug */,
@@ -506,7 +506,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		833871242F857BAF00123799 /* Build configuration list for PBXNativeTarget "RFremapAD" */ = {
+		833871242F857BAF00123799 /* Build configuration list for PBXNativeTarget "remapAD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				833871252F857BAF00123799 /* Debug */,
@@ -515,7 +515,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8338712F2F857BBD00123799 /* Build configuration list for PBXNativeTarget "RFremapPh" */ = {
+		8338712F2F857BBD00123799 /* Build configuration list for PBXNativeTarget "remapPh" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				833871302F857BBD00123799 /* Debug */,

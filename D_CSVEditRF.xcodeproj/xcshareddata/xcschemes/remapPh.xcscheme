@@ -16,8 +16,8 @@
                   <BuildableReference
                      BuildableIdentifier = "primary"
                      BlueprintIdentifier = "8338712A2F857BBD00123799"
-                     BuildableName = "RFremapPh"
-                     BlueprintName = "RFremapPh"
+                     BuildableName = "remapPh"
+                     BlueprintName = "remapPh"
                      ReferencedContainer = "container:D_CSVEditRF.xcodeproj">
                   </BuildableReference>
                </EnvironmentBuildable>
@@ -34,8 +34,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8338712A2F857BBD00123799"
-               BuildableName = "RFremapPh"
-               BlueprintName = "RFremapPh"
+               BuildableName = "remapPh"
+               BlueprintName = "remapPh"
                ReferencedContainer = "container:D_CSVEditRF.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -64,8 +64,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8338712A2F857BBD00123799"
-            BuildableName = "RFremapPh"
-            BlueprintName = "RFremapPh"
+            BuildableName = "remapPh"
+            BlueprintName = "remapPh"
             ReferencedContainer = "container:D_CSVEditRF.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -81,8 +81,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8338712A2F857BBD00123799"
-            BuildableName = "RFremapPh"
-            BlueprintName = "RFremapPh"
+            BuildableName = "remapPh"
+            BlueprintName = "remapPh"
             ReferencedContainer = "container:D_CSVEditRF.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
