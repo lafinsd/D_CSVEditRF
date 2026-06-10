@@ -37,9 +37,9 @@ int getminfo(char **prog,MAPINFO *m) {
         
         fname = whereami(&p);
         
-        if ((res=getxattr(fname, "user.intable", NULL, 0, 0, 0)) > 0) {
+        if ((res=getxattr(fname, XATR_U_REMAPTBL, NULL, 0, 0, 0)) > 0) {
             user = calloc(++res,1);
-            getxattr(fname, "user.intable", user, res, 0, 0);
+            getxattr(fname, XATR_U_REMAPTBL, user, res, 0, 0);
             strcat(name,user);
             free(user);
         }
@@ -47,9 +47,9 @@ int getminfo(char **prog,MAPINFO *m) {
             strcat(name,"drone/merge");
         }
         
-        if ((res=getxattr(fname, "user.log", NULL, 0, 0, 0)) > 0) {
+        if ((res=getxattr(fname, XATR_U_LOG, NULL, 0, 0, 0)) > 0) {
             lfn = calloc(++res,1);
-            getxattr(fname, "user.log", lfn, res, 0, 0);
+            getxattr(fname, XATR_U_LOG, lfn, res, 0, 0);
             logf = fopen(lfn,"a+");
             free(lfn);
         }

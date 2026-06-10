@@ -14,6 +14,7 @@
 #include "drone.h"
 #include "remap.h"
 #include "common.h"
+#include "libcommon.h"
 
 extern MSG_STRNGS sMsg_strngs;
 extern int gShowLine;
@@ -262,7 +263,7 @@ void init(char *prog) {
    char    buf[20];
    ssize_t res;
 
-   res = getxattr(prog, "user.showline", buf, sizeof(buf), 0, 0);
+   res = getxattr(prog, XATR_U_SHOWLINE, buf, sizeof(buf), 0, 0);
 
    if ((res == 1) && (*buf == 'y')) {
        gShowLine = 1;

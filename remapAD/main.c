@@ -251,7 +251,7 @@ int main(int argc, char **argv) {
     } while (NULL != fgets(ibuf, sizeof(ibuf)-1, fin));
     
     if (usr != NULL) {
-        fsetxattr(fileno(fout),"user.cli",usr,strlen(usr),0,0);
+        fsetxattr(fileno(fout),XATR_U_CLI,usr,strlen(usr),0,0);
     }
     fclose(fout);
     fclose(fin);

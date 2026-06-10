@@ -114,7 +114,7 @@ int main(int argc, char **argv) {
     fclose(io.aird.fp);
     fclose(io.phlp.fp);
     if(usr != NULL) {
-        fsetxattr(fileno(io.outf.fp),"user.cli",usr,strlen(usr),0,0);
+        fsetxattr(fileno(io.outf.fp),XATR_U_CLI,usr,strlen(usr),0,0);
     }
     fclose(io.outf.fp);
     
