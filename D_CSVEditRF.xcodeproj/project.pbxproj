@@ -58,7 +58,6 @@
 		833871152F857BA300123799 /* mergeADPh */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = mergeADPh; sourceTree = BUILT_PRODUCTS_DIR; };
 		833871202F857BAF00123799 /* remapAD */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = remapAD; sourceTree = BUILT_PRODUCTS_DIR; };
 		8338712B2F857BBD00123799 /* remapPh */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = remapPh; sourceTree = BUILT_PRODUCTS_DIR; };
-		833871542F857CF400123799 /* libMyDLLoglib2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libMyDLLoglib2.0.dylib; path = ../../../../usr/local/lib/libMyDLLoglib2.0.dylib; sourceTree = "<group>"; };
 		833871552F857CF400123799 /* libMyDLDronelib.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libMyDLDronelib.dylib; path = ../../../../usr/local/lib/libMyDLDronelib.dylib; sourceTree = "<group>"; };
 		83B7BC882FC60C9800C2334C /* libMyDLCommon.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libMyDLCommon.dylib; path = ../../../../usr/local/lib/libMyDLCommon.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -162,7 +161,6 @@
 			children = (
 				83B7BC882FC60C9800C2334C /* libMyDLCommon.dylib */,
 				833871552F857CF400123799 /* libMyDLDronelib.dylib */,
-				833871542F857CF400123799 /* libMyDLLoglib2.0.dylib */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
