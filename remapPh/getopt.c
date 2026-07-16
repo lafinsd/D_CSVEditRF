@@ -156,7 +156,6 @@ static int adjustpaths(GOPT *p) {
             
             p->infile = gctxt.globres;
             cp = gctxt.pathptr;
-            dmylstfree(&gctxt.dlst);
         }
         else {
             if (buildphdatapath(p->options.mission, &cp)) {

@@ -175,7 +175,6 @@ static int adjustfilenames(GOPT *p) {
             
             fname = gctxt.globres;
             dpath = gctxt.pathptr;
-            dmylstfree(&gctxt.dlst);
         }
         else {
             PFXTYPE pfx = isprefixstd(p->infile);
