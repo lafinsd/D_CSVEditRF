@@ -197,13 +197,20 @@ static int adjustfilenames(GOPT *p) {
         // Mission name provided and no input file specified. Assume we want the
         // (single) csv file in the Airdata Data directory.
         DLST_INFO dlst;
+        int num;
         
         if (buildadatapath(p->options.mission, &dpath)) {
             printf("ERROR*** buildadatapath()  %s:%d",__func__,__LINE__);
             return 1;
         }
         
-        if (dgetdirfilelist(dpath, &dlst,T_CSVFILE) != 1) {
+        num = dgetdirfilelist(dpath, &dlst,T_CSVFILE);
+        
+        if (num < 0) {
+            printf("ERROR***  Non existent directory '%s' (%s:%d)\n\n",dpath,__func__,__LINE__);
+            return 1;
+        }
+        if (num != 1) {
             printf("ERROR***  No single csv file found in Airdata directory\n\n");
             return 1;
         }

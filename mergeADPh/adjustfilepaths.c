@@ -33,7 +33,12 @@ int adjustfilepaths(GOPT *p) {
         len = strlen(cp);
         
         if (p->adcsv == NULL) {
-            if (dgetdirfilelist(cp,&dlst,T_CSVFILE) == 1) {
+            int num = dgetdirfilelist(cp,&dlst,T_CSVFILE);
+            if (num < 0) {
+                printf("ERROR***  Non existent directory '%s' (%s:%d)\n\n",cp,__func__,__LINE__);
+                return 1;
+            }
+            else if (num == 1) {
                 len += strlen(dlst.flist[0]) + 2;
                 cpath = calloc(len,1);
                 strcat(cpath,cp);
@@ -58,7 +63,10 @@ int adjustfilepaths(GOPT *p) {
                     else {
                         int idx;
                         
-                        dgetdirfilelist(cp,&dlst,T_CSVFILE);
+                        if (dgetdirfilelist(cp,&dlst,T_CSVFILE) < 0) {
+                            printf("ERROR***  Non existent directory '%s' (%s:%d)\n\n",cp,__func__,__LINE__);
+                            return 1;
+                        }
                         if ((idx=dglobme(&dlst,p->adcsv,".csv")) < 0) {
                             printf("ERROR*** Failed dglobme()  %s:%d\n\n",__func__,__LINE__);
                             return 1;
@@ -91,7 +99,13 @@ int adjustfilepaths(GOPT *p) {
         len = strlen(cp);
         
         if (p->phcsv == NULL) {
-            if (dgetdirfilelist(cp,&dlst,T_CSVFILE) == 1) {
+            int num = dgetdirfilelist(cp,&dlst,T_CSVFILE);
+            
+            if (num < 0) {
+                printf("ERROR***  Non existent directory '%s' (%s:%d)\n\n",cp,__func__,__LINE__);
+                return 1;
+            }
+            if (num == 1) {
                 len += strlen(dlst.flist[0]) + 2;
                 cpath = calloc(len,1);
                 strcat(cpath,cp);
@@ -116,7 +130,10 @@ int adjustfilepaths(GOPT *p) {
                     else {
                         int idx;
                         
-                        dgetdirfilelist(cp,&dlst,T_CSVFILE);
+                        if (dgetdirfilelist(cp,&dlst,T_CSVFILE) < 0) {
+                            printf("ERROR***  Non existent directory '%s' (%s:%d)\n\n",cp,__func__,__LINE__);
+                            return 1;
+                        }
                         if ((idx=dglobme(&dlst,p->phcsv,".csv")) < 0) {
                             printf("ERROR*** Failed dglobme()  %s:%d\n\n",__func__,__LINE__);
                             return 1;
