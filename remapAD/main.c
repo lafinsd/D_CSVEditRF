@@ -116,7 +116,7 @@ int main(int argc, char **argv) {
         return 1;
     }
     
-    init(argv[0]);
+    init();
     
     minfo.c.size   = sizeof(sColmap)/sizeof(sColmap[0]);
     minfo.c.map    = sColmap;

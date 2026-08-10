@@ -20,6 +20,6 @@ char *fmtflt(FMTD *, char *);
 char *chkXlate(AUXB, char *);
 float procHDGDIF(char *, char *);
 TMFMT manageTMFMT(ACT, TMFMT);
-void  init(char *);
+void  init(void);
 
 #endif

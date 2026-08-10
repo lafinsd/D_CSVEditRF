@@ -138,7 +138,6 @@ typedef struct {
     ROWMAP r;
 } RMAPINFO;
 
-void  init(char *);
 int   isrowSHOW(RMAPINFO, char *);
 char *procAUX(COLMAP *, int, int, char *, char *, char *, int);
 

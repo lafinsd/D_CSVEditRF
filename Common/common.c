@@ -259,11 +259,11 @@ char *chkXlate(AUXB which, char *fld) {
    return fld;
 }
 
-void init(char *prog) {
+void init(void) {
    char    buf[20];
    ssize_t res;
 
-   res = getxattr(prog, XATR_U_SHOWLINE, buf, sizeof(buf), 0, 0);
+   res = getxattr(whereami(), XATR_U_SHOWLINE, buf, sizeof(buf), 0, 0);
 
    if ((res == 1) && (*buf == 'y')) {
        gShowLine = 1;

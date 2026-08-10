@@ -65,7 +65,7 @@ int main(int argc, char **argv) {
     RMAPINFO minfo;
     char *pbuf = buildcontext();
     
-    init(argv[0]);
+    init();
     
     printf("%s %s-Dlib:%s-Clib:%s (%s %s Build:%s)\n\n", basename(argv[0]), VERSION, getDroneLibVer(), getCommonLibVer(),__DATE__, __TIME__,pbuf);
     
