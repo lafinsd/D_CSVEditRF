@@ -22,7 +22,7 @@ static int  cntaugs(KEEPCOL *);
 // This has to be called AFTER checking the input csv file for added columns. If there are
 // none then we've already removed any hard coded augmented columns from the table. So
 // don't now process anything specified in the amendment file.
-int updateTable(CMD_LINE *p,RMAPINFO *minfo) {
+int updateTable(RMAPINFO *minfo) {
     FILE *in;
     char *cp;
     char name[100],line[100],str[100];
@@ -37,7 +37,7 @@ int updateTable(CMD_LINE *p,RMAPINFO *minfo) {
         
         sprintf(name,"%s/Applications/Application Support/",getenv("HOME"));
         
-        fname = whereami(p);
+        fname = whereami();
         
         if ((res=getxattr(fname, XATR_U_REMAPTBL, NULL, 0, 0, 0)) > 0) {
             user = calloc(++res,1);

@@ -8,6 +8,6 @@
 #ifndef tableget_h
 #define tableget_h
 
-int getminfo(char **,MAPINFO *);
+int getminfo(MAPINFO *);
 
 #endif

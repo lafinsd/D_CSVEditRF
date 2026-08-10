@@ -35,7 +35,7 @@ int main(int argc, char **argv) {
     MAPINFO minfo;
     IOINFO io;
     int numin = 0;
-    char *pbuf = buildcontext(argv[0]);
+    char *pbuf = buildcontext();
     
     printf("%s %s-Dlib:%s-Clib:%s (%s %s Build:%s)\n\n", basename(argv[0]), VERSION, getDroneLibVer(), getCommonLibVer(),__DATE__, __TIME__,pbuf);
     
@@ -80,7 +80,7 @@ int main(int argc, char **argv) {
     {
         int res;
         
-        if ((res=getminfo(argv,&minfo))) {
+        if ((res=getminfo(&minfo))) {
             if (res > 0) {
                 return 1;
             }

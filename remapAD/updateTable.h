@@ -8,6 +8,6 @@
 #ifndef updatetable_h
 #define updatetable_h
 
-int  updateTable(CMD_LINE *,RMAPINFO *);
+int  updateTable(RMAPINFO *);
 
 #endif

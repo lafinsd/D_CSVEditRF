@@ -67,7 +67,7 @@ int main(int argc, char **argv) {
     char ibuf[BUFSIZE], obuf[BUFSIZE];
     int  retval = 0, numlines=0, numout = 0;
     RMAPINFO minfo;
-    char *pbuf = buildcontext(argv[0]);
+    char *pbuf = buildcontext();
     
     printf("%s %s-Dlib:%s-Clib:%s (%s %s Build:%s)\n\n", basename(argv[0]), VERSION, getDroneLibVer(), getCommonLibVer(),__DATE__, __TIME__,pbuf);
     
@@ -188,7 +188,7 @@ int main(int argc, char **argv) {
                 
                 // Process run time augment columns file unless supressed.
                 if (!opts.options.nofile) {
-                    if (updateTable(&opts.cl,&minfo)) {
+                    if (updateTable(&minfo)) {
                         return 1;
                     }
                 }

@@ -63,7 +63,7 @@ int main(int argc, char **argv) {
     char ibuf[BUFSIZE], obuf[BUFSIZE];
     int  retval = 0, numlines=0, numout = 0;
     RMAPINFO minfo;
-    char *pbuf = buildcontext(argv[0]);
+    char *pbuf = buildcontext();
     
     init(argv[0]);
     

@@ -17,7 +17,7 @@
 static int subit(char *,MAPTBL *);
 static int addit(char *,MAPTBL *);
 
-int getminfo(char **prog,MAPINFO *m) {
+int getminfo(MAPINFO *m) {
     FILE *in,*logf=NULL;
     char *linecp,name[150],line[100];
     int cnt=0,keepgoing = 1;
@@ -29,13 +29,10 @@ int getminfo(char **prog,MAPINFO *m) {
         char *fname;
         char *user,*lfn;
         ssize_t res;
-        CMD_LINE p;
-        
-        p.argv = prog;
         
         sprintf(name,"%s/Applications/Application Support/",getenv("HOME"));
         
-        fname = whereami(&p);
+        fname = whereami();
         
         if ((res=getxattr(fname, XATR_U_REMAPTBL, NULL, 0, 0, 0)) > 0) {
             user = calloc(++res,1);
