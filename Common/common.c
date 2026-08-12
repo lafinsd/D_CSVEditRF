@@ -260,15 +260,16 @@ char *chkXlate(AUXB which, char *fld) {
 }
 
 void init(void) {
-   char    buf[20];
-   ssize_t res;
+    char    *cp,buf[20];
+    ssize_t  res;
 
-   res = getxattr(whereami(), XATR_U_SHOWLINE, buf, sizeof(buf), 0, 0);
+    res = getxattr((cp=whereami()), XATR_U_SHOWLINE, buf, sizeof(buf), 0, 0);
 
-   if ((res == 1) && (*buf == 'y')) {
+    if ((res == 1) && (*buf == 'y')) {
        gShowLine = 1;
-   }
+    }
 
-   return;
+    free(cp);
+    return;
 }
    
