@@ -364,6 +364,7 @@
 				"OTHER_LDFLAGS[arch=*]" = "-lMyDLCommon";
 				SDKROOT = macosx;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				WIPFLAG = OFF;
 			};
 			name = Debug;
 		};
@@ -420,6 +421,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				WIPFLAG = OFF;
 			};
 			name = Release;
 		};
