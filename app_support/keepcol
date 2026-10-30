@@ -1,0 +1,16 @@
+# Get columns from the AirData .csv and create a new one from selected columns.
+# There is a fixed format from Airdata. It may have been augmented with
+# columns from the Phantom Help .csv. The table below tells which of those
+# augmented columns to also import.
+#
+# Put augmented column before ('b'), or after ('a') existing column. An
+# augmented column can also be deleted ('d').
+#
+# Target line (0-based), command ('b','e','d'), string if command not 'd'
+# The string is the title for the column. A comment can be added after
+# the end of the string by appending a '#'. The '#' and everything
+# following is ignored.
+
+6,e,trvl hdg/51 # add after compass heading and gimbal heading
+15,e,total dst/52 # add after max distance
+

@@ -1,0 +1,16 @@
+# Take columns from the Phantom Help .csv and merge them into the Airdata
+# .csv. Added ('+') columns are inserted as they occur just before the last
+# ('Message') column in the Airdata .csv.
+
+# Contents of a cell can also be substituted at run time ('>').
+
+# add command ('+'), Phantom Help from-col, column header string
+# substitute command ('>'), Airdata to-col, Phantom Help from-col
+
+# This table should be in increasing order of Airdata column location
+# for substitute commends. Substitute commands should come first. Order
+# not an issue for adds. A sort is done to enforce the order rules.
+
+>,50,24
++,23,travel hdg
++,10,travel dist

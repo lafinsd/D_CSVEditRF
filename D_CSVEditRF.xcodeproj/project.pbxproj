@@ -104,6 +104,11 @@
 			path = remapPh;
 			sourceTree = "<group>";
 		};
+		837D08303094E2C700AE03A8 /* app_support */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = app_support;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +142,7 @@
 		833870D22F85504600123799 = {
 			isa = PBXGroup;
 			children = (
+				837D08303094E2C700AE03A8 /* app_support */,
 				833870E52F8579DB00123799 /* Common */,
 				833871162F857BA300123799 /* mergeADPh */,
 				833871212F857BAF00123799 /* remapAD */,
@@ -183,6 +189,7 @@
 			);
 			fileSystemSynchronizedGroups = (
 				833871162F857BA300123799 /* mergeADPh */,
+				837D08303094E2C700AE03A8 /* app_support */,
 			);
 			name = mergeADPh;
 			packageProductDependencies = (
