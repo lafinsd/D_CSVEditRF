@@ -17,7 +17,7 @@
 #define ISPHOTO "Photo"
 #define VPTHERE "True"
 
-static char  *procDTG (char *, char *);
+static char  *procDTG (char *, char *, char *);
 static char  *procSAVEMS(char *);
 static char  *numnames(COLNAMES, char *);
 
@@ -272,7 +272,7 @@ char *procAUX(COLMAP *cmap, int idx, int numline, char *ibuf, char *obuf, char *
             
         case TIME:
             if (numline > 1) {
-                obuf = procDTG(fld, obuf);
+                obuf = procDTG(ibuf, fld, obuf);
             }
             if (*(obuf-1) == BLANKSP) {
                 printf ("Missing or corrupt DTG line %d\n", numline);
@@ -306,7 +306,7 @@ static char *procSAVEMS(char *str)  {
     return rfmt;
 }
 
-static char *procDTG(char *str, char *obuf) {
+static char *procDTG(char *date, char *str, char *obuf) {
     int hr,oset;
     
     // find the space after the date to get the AM/PM part
@@ -317,7 +317,7 @@ static char *procDTG(char *str, char *obuf) {
     }
     
     sscanf(str,"%d",&hr);
-    hr-=((GMTC-DSTos()) + oset);
+    hr-=((GMTC-DSTos(date)) + oset);
     hr = (hr<0) ? hr+24 : hr;
     sprintf(obuf,"%02d",hr);
     obuf+=2;

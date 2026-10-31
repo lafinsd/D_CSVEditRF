@@ -333,7 +333,8 @@ static char *procMMAGL(char *str, char *obuf, int num) {
 }
 
 static char *procDTG(char *str, char *obuf) {
-    int hr;
+    int   hr;
+    char *locstr;
 
     if ((*(str) == CSVFLDSEP) || ((strchr(str, BLANKSP)) == NULL) || (strchr(str, BLANKSP) > strchr(str, CSVFLDSEP))) {
         // Missing or corrupt DTG
@@ -343,15 +344,15 @@ static char *procDTG(char *str, char *obuf) {
     
     
     // find the space after the date to get the time part
-    str = strchr(str, BLANKSP);
+    locstr = strchr(str, BLANKSP);
     
-    sscanf(str,"%d",&hr);
-    hr-=(GMTC-DSTos());
+    sscanf(locstr,"%d",&hr);
+    hr-=(GMTC-DSTos(str));
     hr = (hr<0) ? hr+24 : hr;
     sprintf(obuf,"%02d",hr);
     obuf+=2;
-    str = strchr(str,':');
-    strncpy(obuf,str,6);
+    locstr = strchr(locstr,':');
+    strncpy(obuf,locstr,6);
     return obuf+6;
 }
 
